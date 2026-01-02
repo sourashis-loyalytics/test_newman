@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "25422659-eccb-43d5-b16a-8add6d025f0e",
+		"name": "test_collection_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42973723",
+		"_collection_link": "https://restless-star-522234.postman.co/workspace/My-Workspace~8cd586dd-8d95-4638-8396-891aa1a8bfe6/collection/42973723-25422659-eccb-43d5-b16a-8add6d025f0e?action=share&source=collection_link&creator=42973723"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(\"--------->Unit Test Hello World API<---------\");",
+							"",
+							"pm.test(\"Status Code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}
