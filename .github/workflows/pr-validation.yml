@@ -6,7 +6,8 @@ on:
       - main
 
 jobs:
-  validate:
+  postman-validation:
+    name: Postman Validation
     runs-on: ubuntu-latest
 
     steps:
