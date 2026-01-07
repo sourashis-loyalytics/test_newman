@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "unit-test": "mkdir -p postman/scripts/output && (node index.js & PID=$!; sleep 2; npx newman run postman/test_collection_app.json -r cli,json --reporter-json-export \"postman/scripts/output/newman-report-$(date +%Y-%m-%d-%H%M%S).json\"; STATUS=$?; kill $PID; node postman/scripts/logger.js; exit $STATUS)"
   },
@@ -14,6 +13,7 @@
   },
   "homepage": "https://github.com/sourashis-loyalytics/test_newman#readme",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "newman": "^6.2.1"
   }

@@ -15,7 +15,9 @@
 					"script": {
 						"exec": [
 							"console.log(\"--------->Unit Test Hello World API<---------\");",
-							"",
+							"console.log(\"--------->\");",
+							"consoe.log(pm.response.body);",
+							"console.log(\"<---------\");",
 							"pm.test(\"Status Code is 200\", function (){",
 							"    pm.response.to.have.status(200);",
 							"})"
