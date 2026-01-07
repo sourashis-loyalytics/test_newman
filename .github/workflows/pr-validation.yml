@@ -13,7 +13,7 @@ jobs:
     environment: qa
 
     env:
-      MESSAGE_DATA: ${{ secrets.MESSAGE_DATA }}
+      MESSAGE_DATA: ${{ vars.MESSAGE_DATA }}
       MESSAGE_SUFFIX: ${{ vars.MESSAGE_SUFFIX }}
 
     steps:
