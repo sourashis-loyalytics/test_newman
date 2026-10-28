@@ -10,6 +10,12 @@ jobs:
     name: Postman Validation
     runs-on: ubuntu-latest
 
+    environment: qa
+
+    env:
+      MESSAGE_DATA: ${{ vars.MESSAGE_DATA }}
+      MESSAGE_SUFFIX: ${{ vars.MESSAGE_SUFFIX }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
